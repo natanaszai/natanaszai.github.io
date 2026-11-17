@@ -1474,3 +1474,20 @@ section,
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
+
+/*--------------------------------------------------------------
+# Services Table
+--------------------------------------------------------------*/
+.services .table {
+  --bs-table-bg: var(--surface-color);
+  --bs-table-color: var(--default-color);
+  --bs-table-border-color: rgba(255, 255, 255, 0.15);
+  --bs-table-hover-bg: rgba(24, 210, 110, 0.12);
+  --bs-table-hover-color: var(--default-color);
+}
+
+.services .table thead th {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  border-color: var(--accent-color);
+}
