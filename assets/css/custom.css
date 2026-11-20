@@ -272,3 +272,9 @@ button[type="submit"]:active {
   text-align: center;
   vertical-align: middle;
 }
+
+/* ===============Image size==================== */
+#portfolio .portfolio-content img {
+  height: 230px;
+  object-fit: cover;
+}
