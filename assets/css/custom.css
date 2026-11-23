@@ -199,16 +199,16 @@ button[type="submit"]:active {
 
 /* ==============Lists================= */
 
-.tech-list {
+#tech-list {
   list-style: none;
   padding-left: 0;
 }
-.tech-list li {
+#tech-list li {
   position: relative;
   padding-left: 28px;
   margin-bottom: 10px;
 }
-.tech-list li::before {
+#tech-list li::before {
   content: "▹";
   position: absolute;
   left: 0;
@@ -217,18 +217,18 @@ button[type="submit"]:active {
   font-size: 1.1rem;
 }
 
-.steps-list {
+#steps-list {
   list-style: none;
   counter-reset: etapas;
   padding-left: 0;
 }
-.steps-list > li {
+#steps-list > li {
   counter-increment: etapas;
   position: relative;
   padding-left: 44px;
   margin-bottom: 14px;
 }
-.steps-list > li::before {
+#steps-list > li::before {
   content: counter(etapas, decimal-leading-zero);
   position: absolute;
   left: 0;
@@ -246,25 +246,32 @@ button[type="submit"]:active {
   justify-content: center;
 }
 
-.steps-list ul {
+#steps-list ul {
   list-style: none;
   margin-top: 10px;
   padding-left: 0;
 }
-.steps-list ul li {
+#steps-list ul li {
   padding-left: 20px;
   margin-bottom: 6px;
   font-size: 0.92rem;
   color: var(--default-color);
   opacity: 0.85;
 }
-.steps-list ul li::before {
+#steps-list ul li::before {
   content: "–";
   color: var(--default-color);
   font-weight: 400;
 }
 
-/* ==================Table - cell padding======================= */
+/* ============================================
+   9 LD BONUS — TABLE (redo)
+   ============================================ */
+
+.services .table thead th {
+  background-color: var(--accent-color) !important;
+  color: var(--contrast-color) !important;
+}
 
 .services .table th,
 .services .table td {
@@ -272,6 +279,15 @@ button[type="submit"]:active {
   text-align: center;
   vertical-align: middle;
 }
+
+.services .table tbody tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.services .table tbody tr:hover {
+  background-color: rgba(24, 210, 110, 0.12);
+}
+
 
 /* ===============Image size==================== */
 #portfolio .portfolio-content img {
