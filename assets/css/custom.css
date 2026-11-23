@@ -268,23 +268,23 @@ button[type="submit"]:active {
    9 LD BONUS — TABLE (redo)
    ============================================ */
 
-.services .table thead th {
+#services-table thead th {
   background-color: var(--accent-color) !important;
   color: var(--contrast-color) !important;
 }
 
-.services .table th,
-.services .table td {
+#services-table th,
+#services-table td {
   padding: 16px 20px;
   text-align: center;
   vertical-align: middle;
 }
 
-.services .table tbody tr:nth-child(odd) {
+#services-table tbody tr:nth-child(odd) {
   background-color: rgba(255, 255, 255, 0.03);
 }
 
-.services .table tbody tr:hover {
+#services-table tbody tr:hover {
   background-color: rgba(24, 210, 110, 0.12);
 }
 
