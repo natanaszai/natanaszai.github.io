@@ -146,28 +146,32 @@
           <div class="row gy-4">
 
             <div class="col-md-6">
-              <label for="first-name" class="form-label">Vardas</label>
-              <input type="text" id="first-name" name="firstName" class="form-control" placeholder="Jonas" required>
-            </div>
+  <label for="first-name" class="form-label">Vardas</label>
+  <input type="text" id="first-name" name="firstName" class="form-control" placeholder="Jonas" required>
+            <div class="field-error" id="first-name-error"></div>
+          </div>
 
-            <div class="col-md-6">
-              <label for="last-name" class="form-label">Pavardė</label>
-              <input type="text" id="last-name" name="lastName" class="form-control" placeholder="Jonaitis" required>
-            </div>
+          <div class="col-md-6">
+            <label for="last-name" class="form-label">Pavardė</label>
+            <input type="text" id="last-name" name="lastName" class="form-control" placeholder="Jonaitis" required>
+            <div class="field-error" id="last-name-error"></div>
+          </div>
 
-            <div class="col-md-6">
-              <label for="email" class="form-label">El. paštas</label>
-              <input type="email" id="email" name="email" class="form-control" placeholder="jonas@mail.to" required>
-            </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">El. paštas</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="jonas@mail.to" required>
+            <div class="field-error" id="email-error"></div>
+          </div>
 
             <div class="col-md-6">
               <label for="phone" class="form-label">Telefono numeris</label>
-              <input type="tel" id="phone" name="phone" class="form-control" placeholder="+370 6xx xxxxx" required>
+              <input type="tel" id="phone" name="phone" class="form-control" inputmode="numeric" placeholder="+370 6xx xxxxx" required>
             </div>
 
             <div class="col-md-12">
               <label for="address" class="form-label">Adresas</label>
               <input type="text" id="address" name="address" class="form-control" placeholder="Gatvė, miestas" required>
+              <div class="field-error" id="address-error"></div>
             </div>
 
             <div class="col-md-12">
@@ -202,6 +206,7 @@
               <div class="sent-message">Jūsų žinutė išsiųsta. Ačiū!</div>
 
               <button type="submit" id="submit-btn" disabled>Siųsti</button>
+              <button type="button" id="clear-btn">Išvalyti</button>
             </div>
 
           </div>
