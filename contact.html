@@ -142,35 +142,72 @@
 
         </div>
 
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
+        <form id="contact-form" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
           <div class="row gy-4">
 
             <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Jūsų vardas" required="">
+              <label for="first-name" class="form-label">Vardas</label>
+              <input type="text" id="first-name" name="firstName" class="form-control" placeholder="Jonas" required>
             </div>
 
-            <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Jūsų el. paštas" required="">
+            <div class="col-md-6">
+              <label for="last-name" class="form-label">Pavardė</label>
+              <input type="text" id="last-name" name="lastName" class="form-control" placeholder="Jonaitis" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="email" class="form-label">El. paštas</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="jonas@mail.to" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="phone" class="form-label">Telefono numeris</label>
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="+370 6xx xxxxx" required>
             </div>
 
             <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Tema" required="">
+              <label for="address" class="form-label">Adresas</label>
+              <input type="text" id="address" name="address" class="form-control" placeholder="Gatvė, miestas" required>
             </div>
 
             <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Žinutė" required=""></textarea>
+              <hr class="my-2" style="border-color: rgba(255,255,255,0.1);">
+              <h4 class="mb-3" style="font-size: 1.1rem;">Įvertinkite (1–10)</h4>
+            </div>
+
+            <div class="col-md-4">
+              <label for="rating1" class="form-label d-flex justify-content-between">
+                <span>Svetainės dizainas</span> <span id="rating1-value">5</span>
+              </label>
+              <input type="range" class="form-range" id="rating1" name="rating1" min="1" max="10" value="5" required>
+            </div>
+
+            <div class="col-md-4">
+              <label for="rating2" class="form-label d-flex justify-content-between">
+                <span>Informacijos aiškumas</span> <span id="rating2-value">5</span>
+              </label>
+              <input type="range" class="form-range" id="rating2" name="rating2" min="1" max="10" value="5" required>
+            </div>
+
+            <div class="col-md-4">
+              <label for="rating3" class="form-label d-flex justify-content-between">
+                <span>Bendras įspūdis</span> <span id="rating3-value">5</span>
+              </label>
+              <input type="range" class="form-range" id="rating3" name="rating3" min="1" max="10" value="5" required>
             </div>
 
             <div class="col-md-12 text-center">
               <div class="loading">Siunčiama</div>
               <div class="error-message"></div>
-              <div class="sent-message">Jūsų žinutė buvo išsiųsta. Ačiū!</div>
+              <div class="sent-message">Jūsų žinutė išsiųsta. Ačiū!</div>
 
-              <button type="submit">Siųsti žinutę</button>
+              <button type="submit" id="submit-btn" disabled>Siųsti</button>
             </div>
 
           </div>
-        </form><!-- End Contact Form -->
+        </form>
+
+        <div id="form-result" class="container mt-4" style="display: none;"></div><!-- End Contact Form -->
 
       </div>
 
@@ -223,6 +260,8 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- Custom JS File -->
+  <script src="assets/js/custom.js"></script>
 
 </body>
 

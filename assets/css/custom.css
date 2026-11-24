@@ -264,9 +264,7 @@ button[type="submit"]:active {
   font-weight: 400;
 }
 
-/* ============================================
-   9 LD BONUS — TABLE (redo)
-   ============================================ */
+/* ================Table======================= */
 
 #services-table thead th {
   background-color: var(--accent-color) !important;
